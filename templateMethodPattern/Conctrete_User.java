@@ -19,7 +19,7 @@ public class Conctrete_User extends Record{
 	}
 	
 	public void beforeSave() {
-		//before saving we can authenticating , by sending an otp
+		//before saving we can check if we already have a user this name
 		//it is optional- since it is hook , we can still leave it empty 
 	}
 }
