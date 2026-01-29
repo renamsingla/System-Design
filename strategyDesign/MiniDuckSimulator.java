@@ -17,6 +17,12 @@ public class MiniDuckSimulator {
 		
 		mallar.performfly();
 		mallar.performquack();
+		
+		
+		duck landDuck= new landDuck();
+		landDuck.display();
+		landDuck.performquack();
+//		landDuck.performfly(); //this gave null pointer error because the flyb is not instantiated but only declared
 	}
 
 }
