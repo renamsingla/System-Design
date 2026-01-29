@@ -21,6 +21,7 @@ public class Client {
 		
 		
 		for(Todo_List todoss: todoList) {
+			//POLYMORPHISM
 			System.out.println(todoss.getHTML());
 		}
 
