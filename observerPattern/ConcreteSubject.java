@@ -34,7 +34,8 @@ public class ConcreteSubject implements Subject{
 	public void notifyObserver() {
 		// TODO Auto-generated method stub
 		for(int i=0;i<observers.size();i++) {
-			Observer observer= (Observer)observers.get(i);
+//			Observer observer= (Observer)observers.get(i);
+			Observer observer= observers.get(i);
 			observer.update(temp,humidity, pressure);
 		}
 	}

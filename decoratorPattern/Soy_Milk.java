@@ -1,23 +1,22 @@
 package decoratorPattern;
 
-public class Mocha extends AddOnDecorator{
+public class Soy_Milk extends AddOnDecorator{
 	
 	Beverage beverage;
 	
-	//constructor
-	public Mocha(Beverage b) { //has-a behaviour -> aggregation of decorator
+	public Soy_Milk(Beverage b) {
 		this.beverage=b;
 	}
 	@Override
 	public String getDescription() {
 		// TODO Auto-generated method stub
-		return beverage.getDescription()+" with Mocha";
+		return this.beverage.getDescription()+ " with soy milk";
 	}
 
 	@Override
 	public int cost() {
 		// TODO Auto-generated method stub
-		return beverage.cost() + 1;
+		return this.beverage.cost()+10;
 	}
 
 }
