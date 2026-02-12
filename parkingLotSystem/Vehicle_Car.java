@@ -2,7 +2,7 @@ package parkingLotSystem;
 
 public class Vehicle_Car extends Vehicle{
 
-	protected Vehicle_Car(int numberPlate) {
+	protected Vehicle_Car(String numberPlate) {
 		super(numberPlate);
 		// TODO Auto-generated constructor stub
 	}
@@ -10,7 +10,7 @@ public class Vehicle_Car extends Vehicle{
 	@Override
 	public VehicleType getType() {
 		// TODO Auto-generated method stub
-		return null;
+		return VehicleType.CAR;
 	}
 	
 	
