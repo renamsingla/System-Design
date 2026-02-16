@@ -28,6 +28,7 @@ public class Vehicle_Concrete_Factory implements Vehicle_Factory{
 //		}else if(type==VehicleType.BIKE) {
 //			v= new Vehicle_Bike(numberPlate);
 //		}
+		System.out.println("vehicle created- "+v.getNumberPlate() +" "+ v.getType());
 		return v;
 	}
 
