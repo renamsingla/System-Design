@@ -13,7 +13,7 @@ public class Client {
 		Vehicle car2 = factory.createVehicle("KA01AB1234", VehicleType.CAR);
 		Vehicle car3 = factory.createVehicle("KA01AB1234", VehicleType.CAR);
 		Vehicle car4= factory.createVehicle("KA01AB1234", VehicleType.CAR);
-		Vehicle car5 = factory.createVehicle("KA01AB1234", VehicleType.CAR);
+		Vehicle car5 = factory.createVehicle("KA01AB1234", VehicleType.BIKE);
 		
 		//park vehicle
 		Ticket ticket= parkingLot.parkVehicle(car);
