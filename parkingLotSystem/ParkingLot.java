@@ -30,14 +30,31 @@ public class ParkingLot {
 		return parkingLot;
 	}
 	
+	//business APIs
 	
 	//park the vehicle and return ticket to the user
-	//business API
 	public Ticket parkVehicle(Vehicle vehicle) {
 		Parking_Slot slot= slotManager.allocateSlot(vehicle);
 		ticketCounter++;
 		Ticket ticket= new Ticket(vehicle, slot, LocalDateTime.now(), "T"+ticketCounter);
 		activeTicket.put(ticket.getTicketId(), ticket);
 		return ticket;
+	}
+	
+	//un-park the vehicle and return the duration of time the vehicle was parked
+	public long unparkVehicle(String ticketId) {
+		Ticket ticket= activeTicket.get(ticketId);
+		if(ticket==null) {
+			throw new IllegalArgumentException("Invalid Ticket ID");
+		}
+		if(ticket.isActive()) {
+			ticket.closeTicket(LocalDateTime.now());
+			slotManager.vacateSlot(ticket.getSlot());
+			activeTicket.remove(ticketId);
+			long duration= ticket.getDurationInMinutes();
+			return duration;
+		}else {
+			throw new IllegalStateException("Ticket already closed");
+		}
 	}
 }
